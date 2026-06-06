@@ -5,6 +5,6 @@ services:
     ports:
       - "8081:80"
     environment:
-      - VITE_GRAPHQL_URI=http://你的EC2公网IP:8082/graphql
-      - VITE_SERVER_URI=http://你的EC2公网IP:8082
+      - VITE_GRAPHQL_URI=http://52.55.236.175:8082/graphql
+      - VITE_SERVER_URI=http://52.55.236.175:8082
     restart: unless-stopped
