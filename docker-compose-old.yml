@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: wyj1018/234-deploylab-frontend:latest
+    pull_policy: always
+    ports:
+      - "8081:80"
+    environment:
+      # 指向旧版本后端（8082端口）
+      - VITE_GRAPHQL_URI=http://54.224.156.11:8082/graphql
+      - VITE_SERVER_URI=http://54.224.156.11:8082
+    restart: unless-stopped

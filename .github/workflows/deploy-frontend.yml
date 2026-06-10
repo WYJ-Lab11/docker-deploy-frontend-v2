@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.HOST_USER_NAME }}
           key: ${{ secrets.HOST_SSH_PRIVATE_KEY }}
           port: 22
-          source: "docker-compose.yml"
+          source: "docker-compose-old.yml,docker-compose-new.yml"
           target: "/home/ubuntu/frontend"
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.4
